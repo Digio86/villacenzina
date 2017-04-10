@@ -1,0 +1,188 @@
+/*
+Theme Name:         Villacenzina
+Version:            6.0
+Author:             Di Giorgio Mattia
+*/
+
+body, html{margin:0 !important; padding:0 !important;}
+body{background-color:#eeeeee;}
+p, h1, h2, h3{font-family:"Lato"; margin:0 0 2% 0;}
+a{color:#000000 !important;}
+a:hover{color:#56adb6 !important; text-decoration:none;}
+.clear{clear:both;}
+
+
+/*Layout*/
+#container{max-width:1300px; width:100%; margin:0 auto;}
+#layout{width:100%; max-width:1300px; margin:0 auto;}
+header .row.slider{width:100%; max-width:1300px;}
+.small-12.medium-12.large-12.columns {padding: 0;}
+.orbit-container .orbit-slide-number{display:none !important;}
+.orbit-container .orbit-timer{display:none !important}
+.orbit-prev, .orbit-next{display:none;}
+.orbit-bullets{top:-32px !important; z-index:99; !important ; margin:0 auto !important;}
+
+
+/*Menu*/
+.row.menu, .row.lingue{width:100%; max-width:1300px;}
+.row.lingue{padding: 20px 0;}
+.contain-to-grid .top-bar{max-width:100%;}
+nav{background-color:#eeeeee !important;}
+.top-bar-section li:not(.has-form) a:not(.button){background-color:#eeeeee ; color:#010101 !important; font-size:1em !important; font-weight:400 !important; text-transform:uppercase !important; text-align:center;}
+.top-bar-section li.active:not(.has-form) a:not(.button){background-color:#eeeeee !important; color:#56adb6 !important; text-align:center;}
+.top-bar-section li.active:not(.has-form) a:hover:not(.button){background-color:#eeeeee !important; color:#56adb6 !important; text-align:center;}
+.top-bar-section li:not(.has-form) a:hover:not(.button){background-color:#eeeeee !important; color:#56adb6 !important; text-align:center;}
+.top-bar-section ul{margin-right:25px !important;}
+.icon-fb {position: absolute; z-index:999;top: 5px;}
+
+
+/*Menu Mobile*/
+.toggle-topbar.menu-icon span{color:#010101 !important;}
+.top-bar .toggle-topbar.menu-icon a{color:#010101;}
+.top-bar.expanded .title-area{background-color: #eeeeee !important;}
+
+/* Gestione Lingue*/
+ul#qtranslate-chooser{list-style: none; width: 150px;}
+ul#qtranslate-chooser li{float: left; padding-right: 20px !important;}
+a.qtranxs_flag_en.qtranxs_flag_and_text, a.qtranxs_flag_it.qtranxs_flag_and_text, a.qtranxs_flag_de.qtranxs_flag_and_text{color:#eeeeee !important;}
+/*#lingua{position:absolute; top:10px; z-index:999;}*/
+/*.lingue{padding: 20px 0;}
+li.lang-it.active >a{color: #010101 !important;}
+.lang-en, .lang-it{float: left; padding-right:10px;}
+/*.lang-en.active > a, .lang-it.active > a{color:#010101;}*/
+/*.lang-en > a, .lang-it > a{color:#adadad;}
+.lang-en > a:hover, .lang-it > a:hover{color:#010101;}*/
+
+/*Carilion Header*/
+.row.carillon{ background-color:#ece8cd; width:100%; max-width:1300px; padding:10px 15px 20px 15px;}
+.row.carillon .small-12.medium-6.large-2.columns{padding:0 10px !important; text-align:center;}
+img.carillon_header{cursor:pointer;}
+.text_carrilon{display:none; margin:0; text-align:left; font-family:'Lato'; font-size:0.8em; color:#010101; text-align:left; padding:5px; background-color:#56adb6;}
+
+/*Container pages */
+#layout{background:#ffffff;}
+#wrapper{width:100%;max-width:75%;padding: 2% 1%; float:left;  font-family:'Lato'; font-size:1em; }
+.row.contenuto{-webkit-box-shadow: 15px -6px 13px -24px rgba(1,1,1,1);-moz-box-shadow: 15px -6px 13px -24px rgba(1,1,1,1);box-shadow: 15px -6px 13px -24px rgba(1,1,1,1);}
+
+/*News*/
+.row.news h1{font-size:1.8em; text-transform:uppercase; color:#56adb6; font-family:'Lato'; border-bottom:1px solid #56adb6;}
+.row.news_info{margin:3% 0; border-bottom:1px solid #eeeeee; padding-bottom:2%;}
+.row.news_info p{font-family:'Lato'; font-size:1em;}
+.link > a {color:#56adb6 !important; font-size:1.2em;}
+
+/*Sidebar*/
+#sidebar{background-color:#ffffff; width:25%; float:left; padding:2% 1%; }
+.row.sidebar_content .small-12.medium-12.big-12.columns{padding:0;}
+article p {text-align:left;}
+article{text-align:center; margin-bottom:40px;}
+
+/*Sidear tablet*/
+.row.sidebar-tabler.hide-for-large-up{background-color:#ece8cd; text-align:center; padding:3% 0;}
+
+/*Lignano*/
+.row.lignano{padding:2% !important; margin:3% 0 0 0;}
+.small-12.medium-3.large-3.columns{padding:0 1% !important;}
+article.avventure{border-top:1px solid #56adb6; padding:5% 0; border-bottom:1px solid #56adb6; text-align:left;}
+article.avventure h2{font-size:1.1em; color:#56adb6; text-transform:uppercase; font-weight:bold;}
+article.avventure h3{font-size:0.8em; color:#000000; text-transform:uppercase; font-weight:bold;}
+article.avventure span{font-weight:bold; font-size:0.8em;}
+.avventure > a{font-size:1.1em; color:#56adb6 !important;}
+
+/*Contatti*/
+.row.mappa{margin:0 !important;}
+.row.contatti{margin:5% 0 0 !important;}
+.row.contatti_info{margin:0 0 2px 0 !important;}
+.small-12.medium-12.large-4.columns, .small-12.medium-12.large-8.columns{padding:0 4% !important;}
+.small-12.medium-10.large-6.columns > p {font-size:0.9em;}
+.small-12.medium-10.large-6.columns > b {font-size:0.9em;}
+.row.news.tablet{margin:0 ;}
+.row.info{margin:0 ;}
+.small-12.medium-12.large-12.columns > label {font-weight: bold !important; font-size: 1.0em; padding-bottom: 1%;}
+.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required{-moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;}
+.wpcf7-form-control.wpcf7-submit {padding: 10px 30px; background-color: #56adb6; border: none; font-family: 'lato'; text-transform: uppercase; font-size: 0.8em; border-radius: 10px;}
+.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.wpcf7-not-valid{margin-bottom:2px;}
+span.wpcf7-not-valid-tip {color: #ff0000;display: block;font-size: 0.9em; margin-bottom: 10px;}
+div.wpcf7-validation-errors{border:none !important; font-family:'Lato'; font-weight:bold; color:#FF0004;}
+div.wpcf7-mail-sent-ok{border:none !important; font-family:'Lato'; font-weight:bold; color:#56adb6;}
+
+/* Gallery */
+.row.name_gallery, .row.gallery{margin:0;}
+.row.name_gallery h1{font-size:1.8em; text-transform:uppercase; color:#56adb6; font-family:'Lato'; margin-bottom: 20px; border-bottom:1px solid;}
+
+/*Tariffe*/
+.row.tariffe{margin:0;}
+.small-12.large-12.columns > h2{margin:0;}
+.row.tariffe.tipoligia h2 {text-transform:uppercase; font-size:1.4em; color:#56adb6; font-weight: bold !important;}
+.row.tariffe.descrizione p{font-size:1.2em;}
+.row.tariffe.prezzi {border-bottom: 1px solid #eeeeee; padding-bottom: 4%; margin-bottom: 5%;}
+table{margin: 0 auto; width:37%;}
+th{text-align:center !important; padding: 8% !important; background-color:#56adb6 !important; color:#ffffff !important;}
+td {padding: 5% !important; text-align: center !important; font-size: 1em !important; text-transform: capitalize;}
+table tr.even, table tr.alt, table tr:nth-of-type(2n){background-color:#d3e0e1 !important;}
+
+/*Footer*/
+footer { margin-top:10px;}
+.row.imgfooter{width:100%; max-width:1300px; text-align:center;}
+.small-12.medium-12.large-12.columns.info{margin:5px 0 30px 0; background-color:#efedee; padding:10px; text-align:center;}
+.small-12.medium-12.large-12.columns.info p{margin:0; font-family:'Lato'; font-size:0.9em; color:#010101;}
+
+<!-- MEDIA QUERIES -->
+
+// Small screens
+@media only screen { } /* Define mobile styles */
+
+@media only screen and (max-width: 40em) {
+.lang-en > a, .lang-it > a{font-size:0.7em;}
+img.photo_home{width:100%; padding:0 5%; margin-top:30px;}
+#wrapper{max-width:100%}
+#sidebar{display:none;}
+.row.contenuto{box-shadow:none;}
+.row.news_info p{font-size:0.9em;}
+.small-12.medium-3.large-3.columns{padding: 0px;}
+.small-12.medium-10.large-6.columns > p{font-size:1.2em}
+.small-12.medium-10.large-6.columns > b {font-size:1.2em;}
+.row.news.tablet{margin:3% 0;}
+.row.name_gallery h1{font-size:1.2em !important;}
+.row.tariffe.tipoligia h2{font-size:1.1em !important; font-weight: bold !important;}
+.row.tariffe.descrizione p{font-size:1em !important;}
+.icon-fb {margin-top:10px;}
+} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+// Medium screens
+@media only screen and (min-width: 40.063em) {
+#wrapper{max-width:100%}
+#sidebar{display:none;}
+.row.contenuto{box-shadow:none;}
+.row.news_info p{font-size:0.9em;}
+.small-12.medium-3.large-3.columns{padding:0px !important;}
+.small-12.medium-10.large-6.columns > p{font-size:1.2em}
+.small-12.medium-10.large-6.columns > b {font-size:1.2em;}
+.row.news.tablet{margin:3% 0;}
+.row.name_gallery h1{font-size:1.4em !important;}
+.row.tariffe.tipoligia h2{font-size:1.1em !important; font-weight: bold !important;}
+.row.tariffe.descrizione p{font-size:1em !important;}
+.icon-fb {margin-top:10px;}
+} /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+#wrapper{max-width:100%}
+#sidebar{display:none;}
+.row.contenuto{box-shadow:none;}
+.small-12.medium-10.large-6.columns > p{font-size:1.2em}
+.small-12.medium-10.large-6.columns > b {font-size:1.2em;}
+.row.news.tablet{margin:5% 0;}
+
+	 } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+// Large screens
+@media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xxlarge screens */

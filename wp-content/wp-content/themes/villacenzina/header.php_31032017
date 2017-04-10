@@ -1,0 +1,180 @@
+<!doctype html>
+<html class="no-js" <?php language_attributes(); ?> >
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><?php if ( is_category() ) {
+			echo 'Category Archive for &quot;'; single_cat_title(); echo '&quot; | '; bloginfo( 'name' );
+		} elseif ( is_tag() ) {
+			echo 'Tag Archive for &quot;'; single_tag_title(); echo '&quot; | '; bloginfo( 'name' );
+		} elseif ( is_archive() ) {
+			wp_title(''); echo ' Archive | '; bloginfo( 'name' );
+		} elseif ( is_search() ) {
+			echo 'Search for &quot;'.esc_html($s).'&quot; | '; bloginfo( 'name' );
+		} elseif ( is_home() || is_front_page() ) {
+			bloginfo( 'name' ); echo ' | '; bloginfo( 'description' );
+		}  elseif ( is_404() ) {
+			echo 'Error 404 Not Found | '; bloginfo( 'name' );
+		} elseif ( is_single() ) {
+			wp_title('');
+		} else {
+			echo wp_title( ' | ', 'false', 'right' ); bloginfo( 'name' );
+		} ?></title>
+		
+
+ 		<!-- Google Font  Lato-->
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100italic,100,300,400italic,300italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-precomposed.png">
+
+<script>
+	$(document).ready(function(){
+	 $(".text_open").click(function(){
+		$(this).next().toggle("slow","linear");
+	 }); 	 
+	});
+
+</script>
+     
+		
+		<?php wp_head(); ?>
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/foundation.css" />
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/grid-5.css" />
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/cookiechoise.css" />
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/style.css" />
+        <!--link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/backTop.css" /-->
+       
+
+     <script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ 		 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ 			 ga('create', 'UA-76197476-1', 'auto');
+  			ga('send', 'pageview');
+
+	</script>   
+<!--script src="<?php bloginfo('template_url'); ?>/js/jquery.backTop.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.backTop.min.js"></script>
+        <script>
+            $(document).ready( function() {
+                $('#backTop').backTop({
+                    'position' : 1600,
+                    'speed' : 500,
+                    'color' : 'red',
+                });
+            });
+        </script-->
+	
+	</head>
+	<body <?php body_class(); ?>> 
+<!-- -cookie -->
+<script src="<?php bloginfo('template_url'); ?>/js/cookiechoices.js"></script>
+<script>//<![CDATA[
+document.addEventListener('DOMContentLoaded', function(event) {
+    cookieChoices.showCookieConsentBar('Questo sito utilizza cookie, anche di terze parti, per inviarti servizi in linea con le tue preferenze. Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie leggi l\'informativa estesa sui cookie. All\'interno del sito c\'e sempre un link all\'informativa estesa. Cliccando sull\'apposito tasto oppure su un qualsiasi elemento della pagina sottostante acconsenti all\'uso dei cookie. Questo avviso ti verrà riproposto tra 12 mesi.',
+        'OK', 'Leggi...','cookie-policy');
+  });
+//]]></script>	    
+    	<!-- Facebook -->  
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.5&appId=1585144851748260";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script> 
+        <!-- Fine --> 
+   	<div id="container">
+    	<header>
+        <!-- SLIDER-->
+        <div class="row slider">        
+        	<div class="small-12 medium-12 large-12 columns" role="main" >
+          		<ul data-orbit data-options="animation:slide; pause_on_hover:false; animation_speed:2000; navigation_arrows:true; bullets:true;">
+                <?php 
+					  $slider = array('post_type' => 'Slide','showposts' => 5);
+		   			  $list_slider = new WP_Query($slider);
+					  while($list_slider->have_posts()) : $list_slider->the_post();
+					
+					  $image = get_field('immagine');
+					
+                    	if( !empty($image) ):
+				?>	
+                    <li>
+                    	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</li>
+				<?php endif; ?>
+                    <?php
+				  		endwhile;
+					?>                        
+          		</ul>     
+        	</div>
+        </div>                
+            <div class="row menu">
+				<nav role="navigation" data-topbar="" class="top-bar">
+                    <ul class="title-area">
+                        <li class="name"></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                    </ul>    
+                         <section class="top-bar-section">
+						 		<ul class="left">
+								<?php qtranxf_generateLanguageSelectCode('image'); ?>
+								</ul>
+                                <ul class="right">
+                                	<li id="facebook-visit"><a href="https://www.facebook.com/Villacenzinait-1423594471235147/?ref=br_rs"><img src="<?php echo get_bloginfo('template_url');?>/img/fb.png"></a></li>
+                                </ul>                           
+                                <ul class="right">
+                                    <?php wp_nav_menu( array( 'container_class' => 'menu-header') ); ?>
+                                </ul>             
+                         </section>
+             	</nav>           
+            </div>  
+           <div class="row carillon show-for-large-up">
+
+                
+                  <?php 
+					  $carillon = array('post_type' => 'Carilon','showposts' => 6);
+		   			  $list_carillon = new WP_Query($carillon);
+					  while($list_carillon->have_posts()) : $list_carillon->the_post();
+					
+					  $image = get_field('immagine');
+					
+                    	if( !empty($image) ):
+				?>	
+                	<div class="small-12 medium-6 large-2 columns">
+                    	<img class="photo_home" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</div>  
+				<?php endif; ?>
+                    <?php
+				  		endwhile;
+					?>                                                                                          
+           </div> 
+           
+           <!-- SLider x tablet -->
+           <div class="row carillon hide-for-large-up">
+ 				<?php 
+					  $carillon = array('post_type' => 'Carilon','showposts' => 6);
+		   			  $list_carillon = new WP_Query($carillon);
+					  while($list_carillon->have_posts()) : $list_carillon->the_post();
+					
+					  $image = get_field('immagine');
+					
+                    	if( !empty($image) ):
+				?>	
+                	<div class="small-12 medium-4 columns">
+                    	<img class="photo_home" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</div>  
+				<?php endif; ?>
+                    <?php
+				  		endwhile;
+					?>                               
+           </div>
+            
+		</header>
+<section id="layout" role="document">
+	<div id="wrapper">
